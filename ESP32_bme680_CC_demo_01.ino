@@ -99,10 +99,11 @@ void loop() {
   
   //Calculate gas contribution to IAQ index
   // At this point the gas reference value can be used as a reference or a fixed range, currently fixed range
-  gas_reference = 218000 - 50000; // 170000 is assumed to be good, 50000 very bad
+   // At this point the gas reference value can be used as a reference or a fixed range, currently fixed range
+  gas_reference = 300000 - 50000; // 300000 is assumed to be good, 50000 bad
   
-  //=0.75/(218000-50000)*C4-0.22321
-  gas_score = (0.75/gas_reference*bme.readGas()-0.22321)*100;
+  //=0.75/(218000-50000)*C4-0.15
+  gas_score = (0.75/gas_reference*bme.readGas()-0.15)*100;
   
   //Combine results for the final IAQ index value (0-100% where 100% is good quality air)
   float air_quality_score = hum_score + gas_score;
