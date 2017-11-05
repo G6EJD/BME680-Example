@@ -113,7 +113,7 @@ void loop() {
   Serial.println("     Gas element was : "+String(gas_score/100)+" of 0.75");
   if (bme.readGas() < 120000) Serial.println("***** Poor air quality *****");
   Serial.println();
-  if (gas_score < 60 && (getgasreference_count++)%5==5) GetGasReference(); // Less than 60% assumed to be poor, so refresh the sensor
+  if (gas_score < 60 && (getgasreference_count++)%5==0) GetGasReference(); // Less than 60% assumed to be poor, so refresh the sensor
   Serial.println(CalculateIAQ(air_quality_score));
   Serial.println("------------------------------------------------");
   delay(2000);
