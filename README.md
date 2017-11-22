@@ -12,6 +12,6 @@ For Gas it has been assumed that normal breathable air with no pollutants (adver
 
 The result of humidity and gas indexes is a qualitative and a so-called IAQ - Indoor Air Quality index value scaled from 0-100% (where 100% is good). This is then scaled to 0-500 where a 500 value is bad and descriptive values applied in stages from good to hazardous air quality.
 
-There is no definitive (ISO Standard method for calculating an IAQ.
+There is no definitive (ISO Standard) method for calculating an IAQ.
 
 (c) d.l.bird 2017 all rights reserved and as per the MIT licence agreements listed in all my software.
