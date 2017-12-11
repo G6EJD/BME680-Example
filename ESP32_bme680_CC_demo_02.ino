@@ -108,6 +108,8 @@ void loop() {
   //Calculate gas contribution to IAQ index
   int gas_lower_limit = 50000;   // Bad air quality limit
   int gas_upper_limit = 500000;  // Good air quality limit 
+  if (gas_reference > gas_upper_limit) gas_reference = gas_upper_limit; 
+  if (gas_reference < gas_lower_limit) gas_reference = gas_lower_limit;
   gas_score = (0.75/(gas_upper_limit-gas_lower_limit)*gas_reference -(gas_lower_limit*(0.75/(gas_upper_limit-gas_lower_limit))))*100;
   
   //Combine results for the final IAQ index value (0-100% where 100% is good quality air)
@@ -145,5 +147,3 @@ String CalculateIAQ(float score){
   else if (score >=  00 && score <=  50 ) IAQ_text += "Good";
   return IAQ_text;
 }
-
-
