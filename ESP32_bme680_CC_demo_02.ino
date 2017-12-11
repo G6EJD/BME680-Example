@@ -80,6 +80,7 @@ void loop() {
   Serial.println("R\n");
 
 // The MIT License (MIT) Copyright (c) 2017 by David Bird.
+// The formulation and calculation method of an IAQ - Internal Air Quality index
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files
 // (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge,
 // publish, distribute, but not to use it commercially for profit making or to sub-license and/or to sell copies of the Software or to
