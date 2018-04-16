@@ -111,8 +111,8 @@ void loop() {
   }
   
   //Calculate gas contribution to IAQ index
-  int gas_lower_limit = 50000;   // Bad air quality limit
-  int gas_upper_limit = 500000;  // Good air quality limit 
+  int gas_lower_limit = 5000;   // Bad air quality limit
+  int gas_upper_limit = 50000;  // Good air quality limit 
   if (gas_reference > gas_upper_limit) gas_reference = gas_upper_limit; 
   if (gas_reference < gas_lower_limit) gas_reference = gas_lower_limit;
   gas_score = (0.75/(gas_upper_limit-gas_lower_limit)*gas_reference -(gas_lower_limit*(0.75/(gas_upper_limit-gas_lower_limit))))*100;
