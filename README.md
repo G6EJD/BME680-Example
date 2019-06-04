@@ -31,3 +31,5 @@ This IAQ and the ideas and concepts is Copyright (c) David Bird 2018. All rights
  4. You may not transmit it or store it in any other website or other form of electronic retrieval system for commercial purposes.
 
 The above copyright ('as annotated') notice and this permission notice shall be included in all copies or substantial portions of the IAQ index and Software and where the software use is visible to an end-user.
+
+![alt text](/Slide1.jpg)
