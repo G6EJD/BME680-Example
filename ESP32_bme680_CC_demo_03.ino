@@ -103,7 +103,6 @@ void GetGasReference() {
 String CalculateIAQ(int score) {
   String IAQ_text = "air quality is ";
   score = (100 - score) * 5;
-  score = 175;
   if      (score >= 301)                  IAQ_text += "Hazardous";
   else if (score >= 201 && score <= 300 ) IAQ_text += "Very Unhealthy";
   else if (score >= 176 && score <= 200 ) IAQ_text += "Unhealthy";
