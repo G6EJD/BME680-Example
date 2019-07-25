@@ -5,19 +5,17 @@ BME680 IAQ Example
 
 Using the BME680 to measure temperature, pressure, humidity and air quality.
 
-The sensor is used to obtain the so-called Gas Resistance and then calculate an Index of Air Quality (IAQ) from a combination of readings of humidity and the gas content of the air, optionally temperature could be added too.
+The sensor is used to obtain the so-called Gas Resistance and then calculate an Index of Air Quality (IAQ) from a combination of  humidity and the gas content readings of the air, optionally temperature could be added too, but omittied in this example.
 
 The index is a function of humidity which contributes up to 25% and gas concentrations that contributes up to 75%. See slide1.jpg for details of the IAQ index formulation. 
 
-In this current version only Humidity and Gas concentrations are used for the index, but adding temperature woudl be straightforward on the basis that temepratures that are too high (for humans) or too low add to the overal Air Quality index along with Humidity and Gas concetrations.
+In this current version only Humidity and Gas concentrations are used for the index, but adding temperature woudl be straightforward on the basis that temperatures for humans that are too high or low add to the overal Air Quality index along with Humidity and Gas concetrations.
 
-The index is comprised of two parts, up to 25% is determined by Humidity levels and the remaining 75% by Gas concentrations. 
+Humidity is measured between 0 - 100% and is universally accepted as being optimal when it is 40% and where in this index the contribution will be 0, but at a Humidity reading of 0%, the contribution increases to 25% and similarly when humidity reaches 100% it contributes 25% to the index. See Slide1 for details.
 
-Humidity is universally accepted as being optimal when it is 40% within a reading range of 0 to 100%. At 40% humidity the index contribution will be 0%, but at a Humidity reading of 0%, the contribution increases to 25% and similarly at 100% it contributes 25% to the index. See Slide1 for details.
+Gas concentrations for normal breathable air with no pollutants (no adverse gases) corresponds to the sensors highest resitance output of 50,000 ohms or more. The sensor normally outputs a Gas resistance value ranging from a low of 50ohm to a high of 50,000ohm and beyond. A linear relationship is assumed and the output scaled accordingly between 0 and 75% for the range 50-50,000 ohms.
 
-Gas concentrations for normal breathable air with no pollutants (no adverse gases) corresponds to the sensors highest output of 50,000 ohms or more. The sensor normally outputs a Gas resistance value ranging from a low of 50ohm to a high of 50,000ohm and beyond. A linear relationship is assumed and the output scaled accordingly between 0 and 75% for the range 50-50,000 ohms.
-
-The result of combining humidity and gas indexes is a qualitative and so-called IAQ - Indoor Air Quality index value scaled from 0-100% (where 100% is good) and this is then scaled again from 0-500 where a 500 value is bad and descriptive values then applied in stages from good to hazardous air quality.
+The result of combining humidity and gas measurements into an in index is a qualitative and so-called IAQ - Indoor Air Quality index value scaled from 0-100% (where 100% is good). This is then scaled again from 0-500 where a 500 value is bad and descriptive values are applied in stages from good to hazardous air quality.
 
 There is no definitive (ISO Standard) method for calculating an IAQ.
 
