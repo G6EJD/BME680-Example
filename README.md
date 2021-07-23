@@ -9,7 +9,7 @@ The sensor is used to obtain the so-called Gas Resistance and then calculate an 
 
 The index is a function of humidity which contributes up to 25% and gas concentrations that contributes up to 75%. See slide1.jpg for details of the IAQ index formulation. 
 
-In this current version only Humidity and Gas concentrations are used for the index, but adding temperature woudl be straightforward on the basis that temperatures for humans that are too high or low add to the overal Air Quality index along with Humidity and Gas concetrations.
+In this current version only Humidity and Gas concentrations are used for the index, but adding temperature would be straightforward on the basis that temperatures for humans that are too high or low add to the overal Air Quality index along with Humidity and Gas concetrations.
 
 Humidity is measured between 0 - 100% and is universally accepted as being optimal when it is 40% and where in this index the contribution will be 0, but at a Humidity reading of 0%, the contribution increases to 25% and similarly when humidity reaches 100% it contributes 25% to the index. See Slide1 for details.
 
